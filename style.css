@@ -1,63 +1,82 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family:Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 nav {
- background-color: #333;
- height: 60px;
- display: flex;
- align-items: center;
- justify-content: center;
-
+  background-color: #333;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
 }
 
 nav ul {
-    display:flex;
-    
+  display: flex;
 }
 
-nav ul li{
-    margin-right: 1rem;
-    list-style: none;
+nav ul li {
+  margin-right: 1rem;
+  list-style: none;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+}
+
+.burger-menu {
+    display: none;
 }
 
 .hero {
-    color: #fff;
-    height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    background-image: url('/images/nasa-Q1p7bh3SHj8-unsplash.jpg');
-    background-position: center;
-    background-size:cover;
-    
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  background-image: url("/images/nasa-Q1p7bh3SHj8-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
-
 h1 {
-    margin-bottom: 1.4rem; 
+  margin-bottom: 1.4rem;
 }
 
 .hero p {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .cta {
-    text-decoration: none;
-    background-color: chartreuse;
-    padding: 0.4rem 1rem;
-    color: #fff;
+  text-decoration: none;
+  background-color: chartreuse;
+  padding: 0.4rem 1rem;
+  color: #fff;
+}
 
+main {
+    height: 50vh;
+}
+
+@media (max-width: 768px) {
+    nav {
+        justify-content: start;
+    }
+    .nav-links {
+        display: none;
+    }
+    .burger-menu {
+        display: flex;
+        color: #fff;
+        margin-left: 1rem;
+    }
 }
